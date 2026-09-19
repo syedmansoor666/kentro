@@ -102,16 +102,16 @@ export default function FinalCta({ onBookClick }: FinalCtaProps) {
             </button>
 
             <a
-              href="tel:+919886012345"
+              href="tel:+917708982342"
               className="btn-secondary"
               style={{ padding: "15px 28px", fontSize: "16px", borderRadius: "14px" }}
             >
               <Phone size={18} color="#38bdf8" />
-              <span>CALL NOW: +91 98860 12345</span>
+              <span>CALL NOW: +91 77089 82342</span>
             </a>
 
             <a
-              href="https://wa.me/919886012345?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20book%20a%20doorstep%20RO%20service."
+              href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20book%20a%20doorstep%20RO%20service."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp"

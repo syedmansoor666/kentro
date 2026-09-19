@@ -94,7 +94,7 @@ export default function ProblemSolver({ onSelectProblem }: ProblemSolverProps) {
           {problems.map((p, index) => (
             <a
               key={index}
-              href={`https://wa.me/919886012345?text=${encodeURIComponent(`Hi Bangalore RO Care, my RO purifier has this issue: "${p.title}". Please arrange a doorstep technician visit.`)}`}
+              href={`https://wa.me/917708982342?text=${encodeURIComponent(`Hi Bangalore RO Care, my RO purifier has this issue: "${p.title}". Please arrange a doorstep technician visit.`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card"

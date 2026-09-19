@@ -205,7 +205,7 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
               }}
             >
               <a
-                href="tel:+919886012345"
+                href="tel:+917708982342"
                 className="btn-primary"
                 style={{ padding: "14px 28px", fontSize: "16px", borderRadius: "14px" }}
               >
@@ -214,7 +214,7 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
               </a>
 
               <a
-                href="https://wa.me/919886012345?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20book%20a%20doorstep%20RO%20water%20purifier%20service."
+                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20book%20a%20doorstep%20RO%20water%20purifier%20service."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"

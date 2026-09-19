@@ -162,13 +162,13 @@ export default function Navbar({ onBookClick }: NavbarProps) {
             className="desktop-actions"
           >
             <a
-              href="tel:+919886012345"
+              href="tel:+917708982342"
               className="btn-secondary"
               style={{ padding: "8px 16px", fontSize: "13px" }}
-              aria-label="Call +91 98860 12345"
+              aria-label="Call +91 77089 82342"
             >
               <Phone size={14} color="#38bdf8" />
-              <span>+91 98860 12345</span>
+              <span>+91 77089 82342</span>
             </a>
           </div>
 
@@ -224,14 +224,14 @@ export default function Navbar({ onBookClick }: NavbarProps) {
 
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", paddingTop: "8px" }}>
               <a
-                href="tel:+919886012345"
+                href="tel:+917708982342"
                 className="btn-secondary"
                 style={{ width: "100%", justifyContent: "center" }}
               >
-                <Phone size={16} /> Call: +91 98860 12345
+                <Phone size={16} /> Call: +91 77089 82342
               </a>
               <a
-                href="https://wa.me/919886012345?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20book%20a%20doorstep%20RO%20water%20purifier%20service."
+                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20book%20a%20doorstep%20RO%20water%20purifier%20service."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}

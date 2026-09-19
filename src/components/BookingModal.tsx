@@ -53,12 +53,12 @@ export default function BookingModal({
     const text = encodeURIComponent(
       `Hi Bangalore RO Care, I would like to book a service visit:\n• Brand: ${brand}\n• Issue: ${issue}\n• Area: ${area || "Bangalore"}\n• Name: ${name || "Customer"}\n• Phone: ${phone || "Will provide"}`
     );
-    window.open(`https://wa.me/919886012345?text=${text}`, "_blank");
+    window.open(`https://wa.me/917708982342?text=${text}`, "_blank");
     onClose();
   };
 
   const handleDirectCall = () => {
-    window.location.href = "tel:+919886012345";
+    window.location.href = "tel:+917708982342";
   };
 
   return (

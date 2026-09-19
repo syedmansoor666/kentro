@@ -6,7 +6,7 @@ export default function FloatingWhatsApp() {
   return (
     <aside aria-label="WhatsApp support">
       <a
-        href="https://wa.me/919886012345?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20enquire%20/%20book%20a%20doorstep%20RO%20service."
+        href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20want%20to%20enquire%20/%20book%20a%20doorstep%20RO%20service."
         target="_blank"
         rel="noopener noreferrer"
         style={{

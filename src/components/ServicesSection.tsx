@@ -19,7 +19,7 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
     } else if (srvId === "installation") {
       text = "Hi Bangalore RO Care, I would like to book an RO Installation / Uninstallation service at my location.";
     }
-    return `https://wa.me/919886012345?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/917708982342?text=${encodeURIComponent(text)}`;
   };
 
   const services = [

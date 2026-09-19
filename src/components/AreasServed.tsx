@@ -185,12 +185,12 @@ export default function AreasServed() {
             We cover almost every residential layout and gated community across Greater Bangalore.
           </p>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
-            <a href="tel:+919886012345" className="btn-secondary" style={{ padding: "10px 20px", fontSize: "14px" }}>
+            <a href="tel:+917708982342" className="btn-secondary" style={{ padding: "10px 20px", fontSize: "14px" }}>
               <Phone size={15} color="#38bdf8" />
               <span>Check Service via Call</span>
             </a>
             <a
-              href="https://wa.me/919886012345?text=Hi%20Bangalore%20RO%20Care,%20do%20you%20service%20my%20area%20in%20Bangalore?"
+              href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20do%20you%20service%20my%20area%20in%20Bangalore?"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp"

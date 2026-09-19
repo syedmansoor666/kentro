@@ -58,11 +58,11 @@ export default function Footer() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px" }}>
               <a
-                href="tel:+919886012345"
+                href="tel:+917708982342"
                 style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0" }}
               >
                 <Phone size={15} color="#38bdf8" />
-                <span>+91 98860 12345 / +91 80 4567 8900</span>
+                <span>+91 77089 82342 / +91 80 4567 8900</span>
               </a>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0" }}>
                 <MapPin size={15} color="#38bdf8" />

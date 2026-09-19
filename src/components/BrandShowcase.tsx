@@ -156,7 +156,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
               </div>
 
               <a
-                href="https://wa.me/919886012345?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20Kent%20RO%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
+                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20Kent%20RO%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -294,7 +294,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
               </div>
 
               <a
-                href="https://wa.me/919886012345?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20Pureit%20water%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
+                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20Pureit%20water%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

@@ -30,7 +30,7 @@ export default function MobileBottomBar() {
       >
         {/* Full Width Primary Action: Book Service Now (Direct Tel Link) */}
         <a
-          href="tel:+919886012345"
+          href="tel:+917708982342"
           className="btn-primary"
           style={{
             width: "100%",
