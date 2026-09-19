@@ -28,22 +28,36 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      video.muted = false;
-      video.removeAttribute("muted");
-      video.play().catch(() => {
-        // If mobile browser blocks unmuted autoplay before touch, enable audio on first touch
-        const enableAudioOnTouch = () => {
-          if (video) {
-            video.muted = false;
-            video.removeAttribute("muted");
-            video.play().catch(() => {});
+      video.currentTime = 0;
+      
+      const attemptPlay = async () => {
+        try {
+          // Attempt unmuted play first
+          video.muted = false;
+          await video.play();
+        } catch {
+          // If mobile browser restricts unmuted autoplay, autoplay muted & unmute on touch
+          video.muted = true;
+          try {
+            await video.play();
+          } catch {
+            // Ignore fallback errors
           }
-          window.removeEventListener("touchstart", enableAudioOnTouch);
-          window.removeEventListener("click", enableAudioOnTouch);
-        };
-        window.addEventListener("touchstart", enableAudioOnTouch, { once: true });
-        window.addEventListener("click", enableAudioOnTouch, { once: true });
-      });
+
+          const enableAudioOnTouch = () => {
+            if (video) {
+              video.muted = false;
+            }
+            window.removeEventListener("touchstart", enableAudioOnTouch);
+            window.removeEventListener("click", enableAudioOnTouch);
+          };
+
+          window.addEventListener("touchstart", enableAudioOnTouch, { once: true });
+          window.addEventListener("click", enableAudioOnTouch, { once: true });
+        }
+      };
+
+      attemptPlay();
     }
   }, []);
 
@@ -86,12 +100,14 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
       }}
       id="hero"
     >
-      {/* Mobile-Only Video: Unmuted Autoplay Once (No Loop, No Toggle) */}
+      {/* Mobile-Only Video: Autoplay Once on Every Page Load/Refresh (No Loop, No Toggle) */}
       <div className="hero-mobile-video">
         <video
           ref={videoRef}
           autoPlay
+          muted
           playsInline
+          preload="auto"
           style={{
             width: "100%",
             height: "auto",
