@@ -11,6 +11,8 @@ import {
   Star,
   Droplet,
   CheckCircle,
+  Volume2,
+  VolumeX,
 } from "lucide-react";
 
 interface HeroSectionProps {
@@ -19,10 +21,23 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onBookClick }: HeroSectionProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const [glarePos, setGlarePos] = useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      const nextMuted = !videoRef.current.muted;
+      videoRef.current.muted = nextMuted;
+      setIsMuted(nextMuted);
+      if (!nextMuted) {
+        videoRef.current.play().catch(() => {});
+      }
+    }
+  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -63,23 +78,64 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
       }}
       id="hero"
     >
-      {/* Mobile-Only Autoplay Video */}
-      <div className="hero-mobile-video">
+      {/* Mobile-Only Autoplay Video with Sound Toggle */}
+      <div className="hero-mobile-video" style={{ position: "relative" }}>
         <video
+          ref={videoRef}
           autoPlay
-          muted
+          muted={isMuted}
           playsInline
           loop
+          onClick={toggleMute}
           style={{
             width: "100%",
             height: "auto",
             display: "block",
             borderRadius: "16px",
             boxShadow: "0 10px 40px rgba(0, 0, 0, 0.5)",
+            cursor: "pointer",
           }}
         >
           <source src="/RO.mp4" type="video/mp4" />
         </video>
+
+        {/* Floating Sound Toggle Button */}
+        <button
+          onClick={toggleMute}
+          aria-label={isMuted ? "Unmute video" : "Mute video"}
+          style={{
+            position: "absolute",
+            bottom: "36px",
+            right: "28px",
+            background: "rgba(15, 23, 42, 0.88)",
+            color: "#ffffff",
+            border: "1px solid rgba(56, 189, 248, 0.4)",
+            borderRadius: "30px",
+            padding: "8px 14px",
+            display: "flex",
+            alignItems: "center",
+            gap: "6px",
+            fontSize: "12px",
+            fontWeight: 600,
+            backdropFilter: "blur(8px)",
+            cursor: "pointer",
+            zIndex: 10,
+            boxShadow: "0 4px 14px rgba(0,0,0,0.4)",
+            transition: "all 0.2s ease",
+          }}
+        >
+          {isMuted ? (
+            <>
+              <VolumeX size={16} style={{ color: "#ef4444" }} />
+              <span>Tap for Sound 🔊</span>
+            </>
+          ) : (
+            <>
+              <Volume2 size={16} style={{ color: "#38bdf8" }} />
+              <span>Sound On 🔊</span>
+            </>
+          )}
+        </button>
       </div>
 
       {/* Background Decorative Ambient Lighting */}
