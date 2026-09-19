@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import {
   ShieldCheck,
@@ -11,8 +11,6 @@ import {
   Star,
   Droplet,
   CheckCircle,
-  Volume2,
-  VolumeX,
 } from "lucide-react";
 
 interface HeroSectionProps {
@@ -22,34 +20,32 @@ interface HeroSectionProps {
 export default function HeroSection({ onBookClick }: HeroSectionProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const [glarePos, setGlarePos] = useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
 
-  const toggleMute = (e?: React.SyntheticEvent) => {
-    if (e) {
-      e.stopPropagation();
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = false;
+      video.removeAttribute("muted");
+      video.play().catch(() => {
+        // If mobile browser blocks unmuted autoplay before touch, enable audio on first touch
+        const enableAudioOnTouch = () => {
+          if (video) {
+            video.muted = false;
+            video.removeAttribute("muted");
+            video.play().catch(() => {});
+          }
+          window.removeEventListener("touchstart", enableAudioOnTouch);
+          window.removeEventListener("click", enableAudioOnTouch);
+        };
+        window.addEventListener("touchstart", enableAudioOnTouch, { once: true });
+        window.addEventListener("click", enableAudioOnTouch, { once: true });
+      });
     }
-    if (videoRef.current) {
-      const v = videoRef.current;
-      if (v.muted) {
-        v.muted = false;
-        v.volume = 1.0;
-        v.removeAttribute("muted");
-        const promise = v.play();
-        if (promise !== undefined) {
-          promise.catch(() => {});
-        }
-        setIsMuted(false);
-      } else {
-        v.muted = true;
-        v.setAttribute("muted", "true");
-        setIsMuted(true);
-      }
-    }
-  };
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -90,67 +86,22 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
       }}
       id="hero"
     >
-      {/* Mobile-Only Autoplay Video with Sound & Controls */}
-      <div className="hero-mobile-video" style={{ position: "relative" }}>
+      {/* Mobile-Only Video: Unmuted Autoplay Once (No Loop, No Toggle) */}
+      <div className="hero-mobile-video">
         <video
           ref={videoRef}
           autoPlay
-          muted={isMuted}
           playsInline
-          loop
-          controls
-          onClick={toggleMute}
-          onTouchEnd={toggleMute}
           style={{
             width: "100%",
             height: "auto",
             display: "block",
             borderRadius: "16px",
             boxShadow: "0 10px 40px rgba(0, 0, 0, 0.5)",
-            cursor: "pointer",
           }}
         >
           <source src="/RO.mp4" type="video/mp4" />
         </video>
-
-        {/* Floating Sound Toggle Button Overlay */}
-        <button
-          onClick={toggleMute}
-          onTouchEnd={toggleMute}
-          aria-label={isMuted ? "Unmute video" : "Mute video"}
-          style={{
-            position: "absolute",
-            bottom: "48px",
-            right: "20px",
-            background: "rgba(15, 23, 42, 0.92)",
-            color: "#ffffff",
-            border: "1px solid rgba(56, 189, 248, 0.5)",
-            borderRadius: "30px",
-            padding: "8px 14px",
-            display: "flex",
-            alignItems: "center",
-            gap: "6px",
-            fontSize: "12px",
-            fontWeight: 600,
-            backdropFilter: "blur(10px)",
-            cursor: "pointer",
-            zIndex: 10,
-            boxShadow: "0 4px 14px rgba(0,0,0,0.5)",
-            transition: "all 0.2s ease",
-          }}
-        >
-          {isMuted ? (
-            <>
-              <VolumeX size={16} style={{ color: "#ef4444" }} />
-              <span>Tap for Sound 🔊</span>
-            </>
-          ) : (
-            <>
-              <Volume2 size={16} style={{ color: "#38bdf8" }} />
-              <span>Sound On 🔊</span>
-            </>
-          )}
-        </button>
       </div>
 
       {/* Background Decorative Ambient Lighting */}
