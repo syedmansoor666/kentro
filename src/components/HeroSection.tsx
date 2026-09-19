@@ -28,13 +28,25 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
   const [glarePos, setGlarePos] = useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
 
-  const toggleMute = () => {
+  const toggleMute = (e?: React.SyntheticEvent) => {
+    if (e) {
+      e.stopPropagation();
+    }
     if (videoRef.current) {
-      const nextMuted = !videoRef.current.muted;
-      videoRef.current.muted = nextMuted;
-      setIsMuted(nextMuted);
-      if (!nextMuted) {
-        videoRef.current.play().catch(() => {});
+      const v = videoRef.current;
+      if (v.muted) {
+        v.muted = false;
+        v.volume = 1.0;
+        v.removeAttribute("muted");
+        const promise = v.play();
+        if (promise !== undefined) {
+          promise.catch(() => {});
+        }
+        setIsMuted(false);
+      } else {
+        v.muted = true;
+        v.setAttribute("muted", "true");
+        setIsMuted(true);
       }
     }
   };
@@ -78,7 +90,7 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
       }}
       id="hero"
     >
-      {/* Mobile-Only Autoplay Video with Sound Toggle */}
+      {/* Mobile-Only Autoplay Video with Sound & Controls */}
       <div className="hero-mobile-video" style={{ position: "relative" }}>
         <video
           ref={videoRef}
@@ -86,7 +98,9 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
           muted={isMuted}
           playsInline
           loop
+          controls
           onClick={toggleMute}
+          onTouchEnd={toggleMute}
           style={{
             width: "100%",
             height: "auto",
@@ -99,17 +113,18 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
           <source src="/RO.mp4" type="video/mp4" />
         </video>
 
-        {/* Floating Sound Toggle Button */}
+        {/* Floating Sound Toggle Button Overlay */}
         <button
           onClick={toggleMute}
+          onTouchEnd={toggleMute}
           aria-label={isMuted ? "Unmute video" : "Mute video"}
           style={{
             position: "absolute",
-            bottom: "36px",
-            right: "28px",
-            background: "rgba(15, 23, 42, 0.88)",
+            bottom: "48px",
+            right: "20px",
+            background: "rgba(15, 23, 42, 0.92)",
             color: "#ffffff",
-            border: "1px solid rgba(56, 189, 248, 0.4)",
+            border: "1px solid rgba(56, 189, 248, 0.5)",
             borderRadius: "30px",
             padding: "8px 14px",
             display: "flex",
@@ -117,10 +132,10 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
             gap: "6px",
             fontSize: "12px",
             fontWeight: 600,
-            backdropFilter: "blur(8px)",
+            backdropFilter: "blur(10px)",
             cursor: "pointer",
             zIndex: 10,
-            boxShadow: "0 4px 14px rgba(0,0,0,0.4)",
+            boxShadow: "0 4px 14px rgba(0,0,0,0.5)",
             transition: "all 0.2s ease",
           }}
         >
