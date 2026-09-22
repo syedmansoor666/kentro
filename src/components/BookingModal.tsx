@@ -30,7 +30,7 @@ export default function BookingModal({
 
   if (!isOpen) return null;
 
-  const brands = ["Kent", "Pureit", "Aquaguard", "Havells", "Livpure", "Other"];
+  const brands = ["Kent", "Pureit", "LG", "Aquaguard", "Havells", "Livpure", "Other"];
   const commonIssues = [
     "RO Not Turning On",
     "Water Leaking",

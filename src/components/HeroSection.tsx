@@ -36,28 +36,38 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
           video.muted = false;
           await video.play();
         } catch {
-          // If mobile browser restricts unmuted autoplay, autoplay muted & unmute on touch
+          // If mobile browser policy blocks initial unmuted autoplay, play muted & auto unmute on any gesture/scroll
           video.muted = true;
           try {
             await video.play();
           } catch {
-            // Ignore fallback errors
+            // Ignore fallback
           }
-
-          const enableAudioOnTouch = () => {
-            if (video) {
-              video.muted = false;
-            }
-            window.removeEventListener("touchstart", enableAudioOnTouch);
-            window.removeEventListener("click", enableAudioOnTouch);
-          };
-
-          window.addEventListener("touchstart", enableAudioOnTouch, { once: true });
-          window.addEventListener("click", enableAudioOnTouch, { once: true });
         }
       };
 
       attemptPlay();
+
+      // Auto-unmute instantly on any interaction (touch, scroll, click) so user doesn't have to unmute manually
+      const autoUnmuteOnInteraction = () => {
+        if (video) {
+          video.muted = false;
+          video.play().catch(() => {});
+        }
+        ["pointerdown", "touchstart", "touchend", "scroll", "click", "keydown"].forEach((evt) => {
+          window.removeEventListener(evt, autoUnmuteOnInteraction);
+        });
+      };
+
+      ["pointerdown", "touchstart", "touchend", "scroll", "click", "keydown"].forEach((evt) => {
+        window.addEventListener(evt, autoUnmuteOnInteraction, { once: true, passive: true });
+      });
+
+      return () => {
+        ["pointerdown", "touchstart", "touchend", "scroll", "click", "keydown"].forEach((evt) => {
+          window.removeEventListener(evt, autoUnmuteOnInteraction);
+        });
+      };
     }
   }, []);
 
@@ -100,12 +110,11 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
       }}
       id="hero"
     >
-      {/* Mobile-Only Video: Autoplay Once on Every Page Load/Refresh (No Loop, No Toggle) */}
+      {/* Mobile-Only Video: Autoplay Once with Auto-Unmute */}
       <div className="hero-mobile-video">
         <video
           ref={videoRef}
           autoPlay
-          muted
           playsInline
           preload="auto"
           style={{

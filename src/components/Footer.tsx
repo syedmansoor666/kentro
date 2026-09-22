@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
 
             <p style={{ fontSize: "13px", lineHeight: 1.6, color: "#94a3b8", marginBottom: "16px" }}>
-              Trusted RO water purifier service in Bangalore. Expert doorstep repair, filter replacement, installation, and AMC for Kent, Pureit, and other major purifier brands.
+              Trusted RO water purifier service in Bangalore. Expert doorstep repair, filter replacement, installation, and AMC for Kent, Pureit, LG, and other major purifier brands.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px" }}>
@@ -62,7 +62,7 @@ export default function Footer() {
                 style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0" }}
               >
                 <Phone size={15} color="#38bdf8" />
-                <span>+91 77089 82342 / +91 80 4567 8900</span>
+                <span>+91 77089 82342</span>
               </a>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0" }}>
                 <MapPin size={15} color="#38bdf8" />
@@ -96,7 +96,7 @@ export default function Footer() {
               <li><a href="#kent-service" style={{ color: "#cbd5e1" }}>Kent Grand & Grand Plus Repair</a></li>
               <li><a href="#pureit-service" style={{ color: "#cbd5e1" }}>Pureit Water Purifier Service</a></li>
               <li><a href="#pureit-service" style={{ color: "#cbd5e1" }}>Pureit Copper+ & Ultima Care</a></li>
-              <li><a href="#pureit-service" style={{ color: "#cbd5e1" }}>Pureit GermKill Kit (GKK) Replacement</a></li>
+              <li><a href="#lg-service" style={{ color: "#cbd5e1" }}>LG PuriCare RO Service</a></li>
               <li><a href="#services" style={{ color: "#cbd5e1" }}>Aquaguard & Multi-Brand Service</a></li>
             </ul>
           </div>
