@@ -18,39 +18,39 @@ import BookingModal from "@/components/BookingModal";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedBrand, setSelectedBrand] = useState("Kent");
+  const [selectedBrand, setSelectedBrand] = useState("RO + UV Purifier");
   const [selectedIssue, setSelectedIssue] = useState("General RO Service / Repair");
 
-  const openBooking = (brand = "Kent", issue = "General RO Service / Repair") => {
+  const openBooking = (brand = "RO + UV Purifier", issue = "General RO Service / Repair") => {
     setSelectedBrand(brand);
     setSelectedIssue(issue);
     setModalOpen(true);
   };
 
   const handleSelectService = (serviceName: string) => {
-    openBooking("Kent", serviceName);
+    openBooking("RO + UV Purifier", serviceName);
   };
 
   const handleSelectBrand = (brandName: string) => {
-    openBooking(brandName, `${brandName} RO Doorstep Service & Inspection`);
+    openBooking(brandName, `${brandName} Doorstep Service & Inspection`);
   };
 
   const handleSelectProblem = (problemName: string) => {
-    openBooking("Kent", problemName);
+    openBooking("RO + UV Purifier", problemName);
   };
 
   return (
     <main style={{ position: "relative", minHeight: "100vh" }}>
       {/* Navigation Header */}
-      <Navbar onBookClick={() => openBooking("Kent", "General RO Service / Repair")} />
+      <Navbar onBookClick={() => openBooking("RO + UV Purifier", "General RO Service / Repair")} />
 
-      {/* Hero Section with 3D Realistic Kent RO View */}
-      <HeroSection onBookClick={() => openBooking("Kent", "General RO Service / Repair")} />
+      {/* Hero Section with 3D Realistic RO View */}
+      <HeroSection onBookClick={() => openBooking("RO + UV Purifier", "General RO Service / Repair")} />
 
       {/* Complete RO Services Section */}
       <ServicesSection onSelectService={handleSelectService} />
 
-      {/* Specialized Kent & Pureit Showcase */}
+      {/* Specialized RO + UV & All Major Models Showcase */}
       <BrandShowcase onSelectBrand={handleSelectBrand} />
 
       {/* Common RO Problems We Fix */}
@@ -69,7 +69,7 @@ export default function Home() {
       <FaqSection />
 
       {/* Final Call to Action */}
-      <FinalCta onBookClick={() => openBooking("Kent", "General RO Service / Repair")} />
+      <FinalCta onBookClick={() => openBooking("RO + UV Purifier", "General RO Service / Repair")} />
 
       {/* Footer with SEO & Disclaimers */}
       <Footer />

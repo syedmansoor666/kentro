@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Phone, MessageSquare, Wrench, ShieldCheck, Clock } from "lucide-react";
+import { Phone, MessageSquare, Wrench, ShieldCheck, Clock, MapPin, Mail } from "lucide-react";
 
 interface FinalCtaProps {
   onBookClick: () => void;
@@ -9,7 +9,7 @@ interface FinalCtaProps {
 
 export default function FinalCta({ onBookClick }: FinalCtaProps) {
   return (
-    <section className="section" style={{ position: "relative", overflow: "hidden" }}>
+    <section className="section" id="contact" style={{ position: "relative", overflow: "hidden" }}>
       {/* Background Ambient Glow */}
       <div
         style={{
@@ -89,7 +89,7 @@ export default function FinalCta({ onBookClick }: FinalCtaProps) {
               justifyContent: "center",
               flexWrap: "wrap",
               gap: "14px",
-              marginBottom: "28px",
+              marginBottom: "36px",
             }}
           >
             <button
@@ -120,6 +120,111 @@ export default function FinalCta({ onBookClick }: FinalCtaProps) {
               <MessageSquare size={18} />
               <span>WHATSAPP US</span>
             </a>
+          </div>
+
+          {/* Contact Information Cards Grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "16px",
+              padding: "24px",
+              background: "rgba(5, 11, 20, 0.7)",
+              borderRadius: "18px",
+              border: "1px solid rgba(56, 189, 248, 0.2)",
+              textAlign: "left",
+              marginBottom: "24px",
+            }}
+          >
+            {/* Address */}
+            <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+              <div
+                style={{
+                  width: "38px",
+                  height: "38px",
+                  borderRadius: "10px",
+                  background: "rgba(14, 165, 233, 0.15)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#38bdf8",
+                  flexShrink: 0,
+                }}
+              >
+                <MapPin size={20} />
+              </div>
+              <div>
+                <div style={{ fontSize: "12px", color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", marginBottom: "4px" }}>
+                  Physical Office Address
+                </div>
+                <div style={{ fontSize: "13px", color: "#f8fafc", lineHeight: 1.5, fontWeight: 500 }}>
+                  #42/1, 2nd Floor, 80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034
+                </div>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+              <div
+                style={{
+                  width: "38px",
+                  height: "38px",
+                  borderRadius: "10px",
+                  background: "rgba(16, 185, 129, 0.15)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#10b981",
+                  flexShrink: 0,
+                }}
+              >
+                <Mail size={20} />
+              </div>
+              <div>
+                <div style={{ fontSize: "12px", color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", marginBottom: "4px" }}>
+                  Customer Support Email
+                </div>
+                <a
+                  href="mailto:support@bangalorerocare.com"
+                  style={{ fontSize: "14px", color: "#38bdf8", fontWeight: 600, textDecoration: "none" }}
+                >
+                  support@bangalorerocare.com
+                </a>
+                <div style={{ fontSize: "12px", color: "#94a3b8", marginTop: "2px" }}>
+                  Replies within 2 hours
+                </div>
+              </div>
+            </div>
+
+            {/* Phone & Timings */}
+            <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+              <div
+                style={{
+                  width: "38px",
+                  height: "38px",
+                  borderRadius: "10px",
+                  background: "rgba(245, 158, 11, 0.15)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#fbbf24",
+                  flexShrink: 0,
+                }}
+              >
+                <Clock size={20} />
+              </div>
+              <div>
+                <div style={{ fontSize: "12px", color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", marginBottom: "4px" }}>
+                  Working Hours
+                </div>
+                <div style={{ fontSize: "13px", color: "#f8fafc", fontWeight: 500 }}>
+                  Mon - Sun: 8:00 AM – 9:00 PM
+                </div>
+                <div style={{ fontSize: "12px", color: "#10b981", marginTop: "2px", fontWeight: 600 }}>
+                  24x7 WhatsApp Doorstep Booking
+                </div>
+              </div>
+            </div>
           </div>
 
           <div

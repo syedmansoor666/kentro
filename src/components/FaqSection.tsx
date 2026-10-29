@@ -8,12 +8,12 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      q: "Do you service Kent RO purifiers?",
-      a: "Yes. We provide independent service and maintenance for Kent RO water purifiers, subject to the model and issue. Our technicians carry specialized parts for Kent Grand, Grand Plus, Prime, Sterling, and other models.",
+      q: "Do you service RO + UV water purifiers?",
+      a: "Yes. We provide independent repair, maintenance, and filter replacement for all major RO + UV water purifier models, subject to the model and issue. Our technicians carry quality compatible spare parts and filter cartridges.",
     },
     {
-      q: "Do you service Pureit water purifiers?",
-      a: "Yes. We provide independent repair, maintenance and filter replacement services for Pureit water purifiers, including the Copper+ series, Ultima, Classic RO, and GermKill Kit (GKK) replacements.",
+      q: "What types and models of water purifiers do you service?",
+      a: "We service all major water purifier models including RO, UV, UF, mineral, alkaline, wall-mount, table-top, and under-sink systems across Bangalore. We handle routine servicing, filter changes, booster pump repair, and annual maintenance.",
     },
     {
       q: "Do you provide doorstep RO service?",
@@ -43,7 +43,7 @@ export default function FaqSection() {
             Frequently Asked <span className="gradient-text-cyan">Questions</span>
           </h2>
           <p className="section-subtitle">
-            Find quick answers to common questions about our water purifier service, Kent & Pureit maintenance, and doorstep support in Bangalore.
+            Find quick answers to common questions about our water purifier service, RO + UV maintenance, and doorstep support in Bangalore.
           </p>
         </div>
 

@@ -13,7 +13,7 @@ interface BookingModalProps {
 export default function BookingModal({
   isOpen,
   onClose,
-  initialBrand = "Kent",
+  initialBrand = "RO + UV Purifier",
   initialIssue = "General RO Service / Repair",
 }: BookingModalProps) {
   const [brand, setBrand] = useState(initialBrand);
@@ -30,7 +30,14 @@ export default function BookingModal({
 
   if (!isOpen) return null;
 
-  const brands = ["Kent", "Pureit", "LG", "Aquaguard", "Havells", "Livpure", "Other"];
+  const purifierTypes = [
+    "RO + UV Purifier",
+    "Alkaline / Mineral RO",
+    "RO + UV + UF System",
+    "Commercial / Under-Sink RO",
+    "All Major Models",
+    "Other",
+  ];
   const commonIssues = [
     "RO Not Turning On",
     "Water Leaking",
@@ -51,7 +58,7 @@ export default function BookingModal({
 
   const handleWhatsAppBooking = () => {
     const text = encodeURIComponent(
-      `Hi Bangalore RO Care, I would like to book a service visit:\n• Brand: ${brand}\n• Issue: ${issue}\n• Area: ${area || "Bangalore"}\n• Name: ${name || "Customer"}\n• Phone: ${phone || "Will provide"}`
+      `Hi Bangalore RO Care, I would like to book a service visit:\n• Purifier System: ${brand}\n• Issue: ${issue}\n• Area: ${area || "Bangalore"}\n• Name: ${name || "Customer"}\n• Phone: ${phone || "Will provide"}`
     );
     window.open(`https://wa.me/917708982342?text=${text}`, "_blank");
     onClose();
@@ -202,13 +209,13 @@ export default function BookingModal({
             </div>
 
             <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              {/* Brand Selection */}
+              {/* Purifier System Selection */}
               <div>
                 <label style={{ fontSize: "12px", fontWeight: 600, color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
-                  Select Purifier Brand
+                  Select Purifier System / Type
                 </label>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px" }}>
-                  {brands.map((b) => (
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "8px" }}>
+                  {purifierTypes.map((b) => (
                     <button
                       type="button"
                       key={b}
@@ -216,7 +223,7 @@ export default function BookingModal({
                       style={{
                         padding: "8px 10px",
                         borderRadius: "8px",
-                        fontSize: "13px",
+                        fontSize: "12px",
                         fontWeight: 600,
                         border: brand === b ? "1px solid #38bdf8" : "1px solid rgba(255, 255, 255, 0.1)",
                         background: brand === b ? "rgba(14, 165, 233, 0.2)" : "rgba(255, 255, 255, 0.03)",

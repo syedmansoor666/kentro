@@ -209,7 +209,7 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
                   Is your RO purifier leaking, making unusual noises, giving low water flow, or not working properly?
                 </strong>
                 <br />
-                Bangalore RO Care provides professional water purifier repair and maintenance services across Bangalore. Our technicians handle Kent, Pureit and other major RO, UV and UF water purifier brands.
+                Bangalore RO Care provides professional water purifier repair and maintenance services across Bangalore. Our technicians handle all major RO, UV and UF water purifier models.
               </p>
             </div>
 
@@ -225,11 +225,11 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
             >
               <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#cbd5e1" }}>
                 <CheckCircle size={16} color="#38bdf8" />
-                <span>Kent & Pureit Specialists</span>
+                <span>RO + UV Water Purifier Service</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#cbd5e1" }}>
                 <CheckCircle size={16} color="#10b981" />
-                <span>100% Genuine Spare Parts</span>
+                <span>Quality Spare Parts & Filters</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#cbd5e1" }}>
                 <CheckCircle size={16} color="#38bdf8" />
@@ -271,21 +271,9 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
                 <span>WHATSAPP US</span>
               </a>
             </div>
-
-            {/* Customer Rating Proof */}
-            <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingTop: "8px" }}>
-              <div style={{ display: "flex", color: "#fbbf24" }}>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="#fbbf24" />
-                ))}
-              </div>
-              <span style={{ fontSize: "13px", color: "#94a3b8" }}>
-                <strong style={{ color: "#f8fafc" }}>4.9/5 Rating</strong> across 3,500+ Bangalore households serviced
-              </span>
-            </div>
           </div>
 
-          {/* Right Column: 3D Realistic Kent RO View */}
+          {/* Right Column: 3D Realistic RO Purifier View */}
           <div
             style={{
               position: "relative",
@@ -364,7 +352,7 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
                   </div>
                 </div>
 
-                {/* Realistic Kent RO Purifier Showcase */}
+                {/* Realistic RO Purifier Showcase */}
                 <div
                   style={{
                     position: "relative",
@@ -391,10 +379,10 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
                     }}
                   />
 
-                  {/* Kent Grand Plus Realistic Image */}
+                  {/* RO + UV Purifier Realistic View */}
                   <Image
-                    src="/images/kent-grand-plus.webp"
-                    alt="Realistic Kent Grand Plus Mineral RO Purifier Bangalore Service"
+                    src="/images/Hero image.png"
+                    alt="Multi-Stage RO + UV Water Purifier Bangalore Service - All Major Water Purifier Models"
                     width={340}
                     height={360}
                     priority
@@ -483,7 +471,7 @@ export default function HeroSection({ onBookClick }: HeroSectionProps) {
                     color: "#94a3b8",
                   }}
                 >
-                  <strong style={{ color: "#f8fafc" }}>Kent Grand Plus Mineral RO™</strong> (RO + UV + UF + TDS Controller)
+                  <strong style={{ color: "#f8fafc" }}>RO + UV Water Purifier Service</strong> (RO + UV + UF + TDS Controller)
                 </div>
               </div>
 

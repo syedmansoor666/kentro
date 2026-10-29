@@ -21,12 +21,13 @@ export default function Navbar({ onBookClick }: NavbarProps) {
 
   const navLinks = [
     { name: "Services", href: "#services" },
-    { name: "Kent RO", href: "#kent-service" },
-    { name: "Pureit Service", href: "#pureit-service" },
+    { name: "RO + UV Care", href: "#purifier-service" },
+    { name: "All Models", href: "#purifier-service" },
     { name: "RO AMC", href: "#amc" },
     { name: "Problems We Fix", href: "#problems" },
     { name: "Why Us", href: "#why-us" },
     { name: "Areas", href: "#areas" },
+    { name: "Contact", href: "#contact" },
     { name: "FAQs", href: "#faqs" },
   ];
 
@@ -52,7 +53,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
         </span>
         <span style={{ opacity: 0.7, display: "none" }} className="topbar-bullet">•</span>
         <span style={{ display: "none", alignItems: "center", gap: "4px" }} className="topbar-guarantee">
-          <ShieldCheck size={13} /> 100% Genuine Spare Parts & 30-Day Service Guarantee
+          <ShieldCheck size={13} /> Quality Spare Parts & Filters & 30-Day Service Guarantee
         </span>
       </div>
 

@@ -5,25 +5,25 @@ import Image from "next/image";
 import { CheckCircle2, Wrench, ShieldAlert, Sparkles, ArrowRight } from "lucide-react";
 
 interface BrandShowcaseProps {
-  onSelectBrand: (brandName: string) => void;
+  onSelectBrand?: (brandName: string) => void;
 }
 
 export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
   return (
-    <section className="section" id="kent-service">
+    <section className="section" id="purifier-service">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
           <span className="section-tag">Specialized Doorstep Support</span>
           <h2 className="section-title">
-            <span className="gradient-text-cyan">Kent</span>, <span className="gradient-text-copper">Pureit</span> & <span style={{ color: "#f43f5e" }}>LG</span> RO Service in Bangalore
+            <span className="gradient-text-cyan">RO + UV Water Purifier Service</span> & <span className="gradient-text-copper">All Major Models</span> in Bangalore
           </h2>
           <p className="section-subtitle">
-            Specialized doorstep care for Bangalore&apos;s most trusted purifier brands. Our technicians carry genuine model-specific replacement filters, membranes, and diagnostics.
+            Specialized doorstep care for all major water purifier models. Our experienced technicians carry quality model-compatible replacement filters, membranes, and diagnostics.
           </p>
         </div>
 
-        {/* Brand Showcase Grid */}
+        {/* Specialized Purifier Grid */}
         <div
           style={{
             display: "grid",
@@ -32,9 +32,9 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
           }}
           className="brand-grid"
         >
-          {/* Kent RO Card */}
+          {/* Card 1: RO + UV Water Purifier Service */}
           <div
-            className="glass-card brand-card-inner brand-kent"
+            className="glass-card brand-card-inner brand-card-ro"
             style={{
               padding: "36px 30px",
               display: "grid",
@@ -79,8 +79,8 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   }}
                 />
                 <Image
-                  src="/images/kent-grand.webp"
-                  alt="Kent RO Service in Bangalore - Kent Grand & Prime Repair"
+                  src="/images/Hero image.png"
+                  alt="RO + UV Water Purifier Service in Bangalore - All Major Water Purifier Models"
                   width={260}
                   height={270}
                   style={{
@@ -99,7 +99,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   fontWeight: 600,
                 }}
               >
-                Service for Kent Grand, Prime, Sterling, Pearl & Super+
+                Service for All Major RO, UV & UF Water Purifier Models
               </span>
             </div>
 
@@ -121,15 +121,15 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   marginBottom: "12px",
                 }}
               >
-                <Sparkles size={13} /> Kent Purifier Specialists
+                <Sparkles size={13} /> RO + UV Purifier Specialists
               </div>
 
               <h3 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "12px", color: "#f8fafc" }}>
-                Kent RO Service in Bangalore
+                RO + UV Water Purifier Service in Bangalore
               </h3>
 
               <p style={{ fontSize: "15px", color: "#cbd5e1", lineHeight: 1.6, marginBottom: "20px" }}>
-                Need Kent RO repair or maintenance in Bangalore? Our technicians can assist with common Kent purifier issues, filter replacement, membrane replacement, leakage, low water flow and general maintenance.
+                Need RO + UV water purifier repair or maintenance in Bangalore? Our experienced technicians assist with multi-stage filtration issues, quality filter replacement, membrane replacement, leakage, low water flow, and general maintenance.
               </p>
 
               <div
@@ -141,12 +141,12 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                 }}
               >
                 {[
-                  "Kent Grand & Grand Plus Service",
-                  "Kent Mineral RO Membrane Change",
-                  "Kent Booster Pump & SV Valve",
-                  "UV LED Tank Disinfection Fix",
-                  "Auto-Flush & SMPS Adapter",
-                  "Complete Kent Annual AMC",
+                  "Multi-Stage RO + UV Filter Service",
+                  "Quality RO Membrane Replacement",
+                  "High-Pressure Booster Pump Repair",
+                  "UV LED & Chamber Disinfection Check",
+                  "Auto-Flush & SMPS Adapter Setup",
+                  "Complete Purifier Annual AMC",
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#e2e8f0" }}>
                     <CheckCircle2 size={16} color="#38bdf8" style={{ flexShrink: 0 }} />
@@ -156,23 +156,22 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
               </div>
 
               <a
-                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20Kent%20RO%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
+                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20RO%20%2B%20UV%20water%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
                 style={{ padding: "14px 28px", fontSize: "15px", borderRadius: "14px" }}
               >
                 <Wrench size={18} />
-                <span>BOOK KENT RO SERVICE</span>
+                <span>BOOK RO + UV SERVICE</span>
                 <ArrowRight size={16} />
               </a>
             </div>
           </div>
 
-          {/* Pureit RO Card */}
+          {/* Card 2: Alkaline & Mineral RO Service */}
           <div
-            className="glass-card brand-card-inner brand-pureit"
-            id="pureit-service"
+            className="glass-card brand-card-inner brand-card-mineral"
             style={{
               padding: "36px 30px",
               display: "grid",
@@ -217,8 +216,8 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   }}
                 />
                 <Image
-                  src="/images/pureit-copper-ro.png"
-                  alt="Pureit Water Purifier Service in Bangalore - Copper+ & Mineral RO Repair"
+                  src="/images/Mineral & Alkaline RO image.png"
+                  alt="Mineral RO Water Purifier Service in Bangalore - All Major Water Purifier Models"
                   width={250}
                   height={270}
                   style={{
@@ -237,7 +236,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   fontWeight: 600,
                 }}
               >
-                Service for Pureit Copper+, Ultima, Eco, Vital & Classic
+                Service for Advanced Mineral, Alkaline & Multi-Stage Models
               </span>
             </div>
 
@@ -259,15 +258,15 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   marginBottom: "12px",
                 }}
               >
-                <Sparkles size={13} /> Pureit Purifier Specialists
+                <Sparkles size={13} /> Mineral & Alkaline Specialists
               </div>
 
               <h3 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "12px", color: "#f8fafc" }}>
-                Pureit Service in Bangalore
+                Mineral & Alkaline RO Service in Bangalore
               </h3>
 
               <p style={{ fontSize: "15px", color: "#cbd5e1", lineHeight: 1.6, marginBottom: "20px" }}>
-                Looking for Pureit water purifier service in Bangalore? Get doorstep assistance for purifier inspection, repair, filter replacement, maintenance and installation.
+                Looking for mineral or alkaline water purifier service in Bangalore? Get doorstep assistance for purifier inspection, repair, cartridge replacement, maintenance, and installation.
               </p>
 
               <div
@@ -279,12 +278,12 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                 }}
               >
                 {[
-                  "Pureit GermKill Kit (GKK) Replacement",
-                  "Pureit Copper+ Auto-Dispense Fix",
+                  "Alkaline & Mineral Cartridge Replacement",
+                  "Copper Infusion & Dispenser Care",
                   "Low Water Flow & Tank Filling Repair",
                   "Digital Purity Indicator Sensor Check",
-                  "Pureit RO Membrane & Carbon Filters",
-                  "Pureit Re-installation & Plumbing Setup",
+                  "Quality RO Membrane & Carbon Filters",
+                  "Complete Re-installation & Plumbing Setup",
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#e2e8f0" }}>
                     <CheckCircle2 size={16} color="#f59e0b" style={{ flexShrink: 0 }} />
@@ -294,7 +293,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
               </div>
 
               <a
-                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20Pureit%20water%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
+                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20mineral%20RO%20water%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -313,16 +312,15 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                 }}
               >
                 <Wrench size={18} />
-                <span>BOOK PUREIT SERVICE</span>
+                <span>BOOK MINERAL RO SERVICE</span>
                 <ArrowRight size={16} />
               </a>
             </div>
           </div>
 
-          {/* LG RO Card */}
+          {/* Card 3: All Major Water Purifier Models Service */}
           <div
-            className="glass-card brand-card-inner brand-lg"
-            id="lg-service"
+            className="glass-card brand-card-inner brand-card-major"
             style={{
               padding: "36px 30px",
               display: "grid",
@@ -367,8 +365,8 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   }}
                 />
                 <Image
-                  src="/images/lg-ro-transparent.png"
-                  alt="LG RO Water Purifier Service in Bangalore - PuriCare & Dual Protection Repair"
+                  src="/images/All Major Water image.png"
+                  alt="Water Purifier Service in Bangalore - All Major Water Purifier Models"
                   width={250}
                   height={270}
                   style={{
@@ -387,7 +385,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   fontWeight: 600,
                 }}
               >
-                Service for LG PuriCare, Dual Protection, WW180EP, WW140NP & UV RO
+                Service for Wall-Mount, Table-Top & Under-Sink Models
               </span>
             </div>
 
@@ -409,15 +407,15 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                   marginBottom: "12px",
                 }}
               >
-                <Sparkles size={13} /> LG Purifier Specialists
+                <Sparkles size={13} /> All Major Models Specialists
               </div>
 
               <h3 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "12px", color: "#f8fafc" }}>
-                LG RO Service in Bangalore
+                All Major Water Purifier Models Service
               </h3>
 
               <p style={{ fontSize: "15px", color: "#cbd5e1", lineHeight: 1.6, marginBottom: "20px" }}>
-                Need LG RO water purifier repair or maintenance in Bangalore? Get doorstep assistance for filter replacement, stainless steel tank care, leakage repair, and performance tuning.
+                Need water purifier repair or maintenance in Bangalore? Get doorstep assistance for quality filter replacement, stainless steel tank care, leakage repair, and performance tuning.
               </p>
 
               <div
@@ -429,12 +427,12 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                 }}
               >
                 {[
-                  "LG PuriCare Filter & Membrane Change",
+                  "Multi-Stage Filter & Membrane Change",
                   "Stainless Steel Tank Sterilization Check",
                   "Digital Indicator & Sensor Diagnostics",
                   "Low Flow & Leakage Repair",
-                  "LG RO Re-installation & Plumbing Setup",
-                  "Complete LG Water Purifier AMC",
+                  "RO Re-installation & Plumbing Setup",
+                  "All Major Water Purifier Models AMC",
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#e2e8f0" }}>
                     <CheckCircle2 size={16} color="#f43f5e" style={{ flexShrink: 0 }} />
@@ -444,7 +442,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
               </div>
 
               <a
-                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20LG%20water%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
+                href="https://wa.me/917708982342?text=Hi%20Bangalore%20RO%20Care,%20I%20need%20water%20purifier%20service%20at%20my%20doorstep.%20Please%20share%20technician%20availability."
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -463,14 +461,14 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
                 }}
               >
                 <Wrench size={18} />
-                <span>BOOK LG RO SERVICE</span>
+                <span>BOOK PURIFIER SERVICE</span>
                 <ArrowRight size={16} />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Regulatory Independent Service Notice from content.md */}
+        {/* Regulatory Independent Service Notice */}
         <div
           style={{
             marginTop: "30px",
@@ -485,7 +483,7 @@ export default function BrandShowcase({ onSelectBrand }: BrandShowcaseProps) {
         >
           <ShieldAlert size={18} color="#94a3b8" style={{ flexShrink: 0 }} />
           <p style={{ fontSize: "12px", color: "#94a3b8", lineHeight: 1.5, margin: 0 }}>
-            <strong>Independent Service Notice:</strong> Bangalore RO Care is an independent multi-brand water purifier service, repair, and maintenance provider across Bangalore. We provide specialized service for Kent, Pureit, LG, and other major brands and are not an authorized franchise or official manufacturer service center.
+            <strong>Independent Service Notice:</strong> Bangalore RO Care is an independent multi-brand water purifier service, repair, and maintenance provider across Bangalore. We provide specialized service for all major water purifier models and are not an authorized franchise or official manufacturer service center.
           </p>
         </div>
       </div>

@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
     {
       icon: <Layers size={26} color="#06b6d4" />,
       title: "Multi-Brand Service",
-      desc: "Expert independent support for Kent, Pureit, and other commonly used residential and commercial RO brands.",
+      desc: "Expert independent support for all major water purifier models and commonly used residential and commercial RO systems.",
     },
   ];
 
@@ -167,11 +167,11 @@ export default function WhyChooseUs() {
                   marginBottom: "12px",
                 }}
               >
-                <ShieldCheck size={14} /> Certified Technicians
+                <ShieldCheck size={14} /> Experienced Technicians
               </div>
 
               <h4 style={{ fontSize: "22px", fontWeight: 800, color: "#ffffff", marginBottom: "8px" }}>
-                100% Genuine Filter Replacements
+                Quality Spare Parts & Filters
               </h4>
               <p style={{ fontSize: "13px", color: "#cbd5e1", lineHeight: 1.5, marginBottom: "16px" }}>
                 We test raw inlet TDS and purified outlet TDS with calibrated digital meters before and after every service visit.
@@ -179,16 +179,16 @@ export default function WhyChooseUs() {
 
               <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
                 <div>
-                  <div style={{ fontSize: "20px", fontWeight: 800, color: "#38bdf8" }}>3,500+</div>
-                  <div style={{ fontSize: "11px", color: "#94a3b8" }}>Bangalore Homes</div>
-                </div>
-                <div>
                   <div style={{ fontSize: "20px", fontWeight: 800, color: "#10b981" }}>90 Mins</div>
                   <div style={{ fontSize: "11px", color: "#94a3b8" }}>Avg. Response Time</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: "20px", fontWeight: 800, color: "#fbbf24" }}>4.9★</div>
-                  <div style={{ fontSize: "11px", color: "#94a3b8" }}>Customer Rating</div>
+                  <div style={{ fontSize: "20px", fontWeight: 800, color: "#38bdf8" }}>Doorstep</div>
+                  <div style={{ fontSize: "11px", color: "#94a3b8" }}>Service Across City</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: "20px", fontWeight: 800, color: "#34d399" }}>30 Days</div>
+                  <div style={{ fontSize: "11px", color: "#94a3b8" }}>Service Guarantee</div>
                 </div>
               </div>
             </div>

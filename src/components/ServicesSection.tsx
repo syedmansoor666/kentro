@@ -45,7 +45,7 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
       icon: <Filter size={28} color="#10b981" />,
       badge: "Original Cartridges",
       title: "RO Filter Replacement",
-      desc: "Restore crystal-pure drinking water quality with genuine replacement filter cartridges.",
+      desc: "Restore crystal-pure drinking water quality with quality replacement filter cartridges and membranes.",
       features: [
         "Spun Polypropylene Sediment filters",
         "Pre-Carbon & Post-Carbon filter blocks",
@@ -70,7 +70,7 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
         "Priority emergency technician visit in 90 mins",
         "Discounted replacement consumables",
         "Free TDS and water purity health reports",
-        "Available for Kent, Pureit and all major models",
+        "Available for all major water purifier models",
       ],
       action: "Book RO AMC on WhatsApp",
     },
@@ -103,7 +103,7 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
             Complete <span className="gradient-text-cyan">RO Water Purifier</span> Services
           </h2>
           <p className="section-subtitle">
-            From sudden leaks to annual filter replacement and new installations, our certified Bangalore technicians ensure your purifier runs at peak purity.
+            From sudden leaks to annual filter replacement and new installations, our experienced Bangalore technicians ensure your purifier runs at peak purity.
           </p>
         </div>
 

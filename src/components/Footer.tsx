@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Droplet, Phone, Mail, MapPin, ShieldCheck, Heart } from "lucide-react";
+import { Droplet, Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const areas = [
@@ -53,20 +53,27 @@ export default function Footer() {
             </div>
 
             <p style={{ fontSize: "13px", lineHeight: 1.6, color: "#94a3b8", marginBottom: "16px" }}>
-              Trusted RO water purifier service in Bangalore. Expert doorstep repair, filter replacement, installation, and AMC for Kent, Pureit, LG, and other major purifier brands.
+              Trusted RO water purifier service in Bangalore. Expert doorstep repair, filter replacement, installation, and AMC for all major water purifier models.
             </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "13px" }}>
               <a
                 href="tel:+917708982342"
-                style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0" }}
+                style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0", textDecoration: "none" }}
               >
                 <Phone size={15} color="#38bdf8" />
                 <span>+91 77089 82342</span>
               </a>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0" }}>
-                <MapPin size={15} color="#38bdf8" />
-                <span>Doorstep Service Across All Bangalore Layouts</span>
+              <a
+                href="mailto:support@bangalorerocare.com"
+                style={{ display: "flex", alignItems: "center", gap: "8px", color: "#e2e8f0", textDecoration: "none" }}
+              >
+                <Mail size={15} color="#38bdf8" />
+                <span>support@bangalorerocare.com</span>
+              </a>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "8px", color: "#e2e8f0", lineHeight: 1.4 }}>
+                <MapPin size={16} color="#38bdf8" style={{ flexShrink: 0, marginTop: "2px" }} />
+                <span>#42/1, 2nd Floor, 80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034</span>
               </div>
             </div>
           </div>
@@ -86,18 +93,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Brand Services Links */}
+          {/* Purifier Models & Types */}
           <div>
             <h4 style={{ fontSize: "15px", fontWeight: 700, color: "#f8fafc", marginBottom: "16px" }}>
-              Purifier Brands
+              Purifier Models & Types
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px", fontSize: "13px" }}>
-              <li><a href="#kent-service" style={{ color: "#cbd5e1" }}>Kent RO Service Bangalore</a></li>
-              <li><a href="#kent-service" style={{ color: "#cbd5e1" }}>Kent Grand & Grand Plus Repair</a></li>
-              <li><a href="#pureit-service" style={{ color: "#cbd5e1" }}>Pureit Water Purifier Service</a></li>
-              <li><a href="#pureit-service" style={{ color: "#cbd5e1" }}>Pureit Copper+ & Ultima Care</a></li>
-              <li><a href="#lg-service" style={{ color: "#cbd5e1" }}>LG PuriCare RO Service</a></li>
-              <li><a href="#services" style={{ color: "#cbd5e1" }}>Aquaguard & Multi-Brand Service</a></li>
+              <li><a href="#purifier-service" style={{ color: "#cbd5e1" }}>RO + UV Water Purifier Service</a></li>
+              <li><a href="#purifier-service" style={{ color: "#cbd5e1" }}>All Major Water Purifier Models</a></li>
+              <li><a href="#purifier-service" style={{ color: "#cbd5e1" }}>Mineral & Alkaline RO Care</a></li>
+              <li><a href="#services" style={{ color: "#cbd5e1" }}>Multi-Stage Filter Replacement</a></li>
+              <li><a href="#services" style={{ color: "#cbd5e1" }}>Under-Sink & Wall-Mount Repair</a></li>
+              <li><a href="#amc" style={{ color: "#cbd5e1" }}>Annual Maintenance Contract (AMC)</a></li>
             </ul>
           </div>
 
@@ -140,7 +147,7 @@ export default function Footer() {
             color: "#64748b",
           }}
         >
-          <strong style={{ color: "#94a3b8" }}>Disclaimer:</strong> Bangalore RO Care is an independent service, repair, and maintenance provider for water purifiers. Brand names such as Kent, Pureit, Aquaguard, and others are registered trademarks of their respective owners and are mentioned strictly for descriptive purposes to indicate product compatibility with our service expertise. We are not affiliated with or authorized by any specific manufacturer.
+          <strong style={{ color: "#94a3b8" }}>Disclaimer:</strong> Bangalore RO Care is an independent service, repair, and maintenance provider for water purifiers. We provide professional repair and upkeep for all major water purifier models. We are an independent service provider and are not affiliated with or an authorized franchise of any specific manufacturer.
         </div>
 
         {/* Bottom Bar */}

@@ -27,7 +27,7 @@ export default function HowItWorks() {
       num: "04",
       icon: <Settings size={24} color="#c084fc" />,
       title: "Service & Repair",
-      desc: "Required servicing, cleaning, or genuine parts replacement is carried out only after your upfront approval.",
+      desc: "Required servicing, cleaning, or quality spare parts & filters replacement is carried out only after your upfront approval.",
     },
     {
       num: "05",

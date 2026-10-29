@@ -2,17 +2,15 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kentro | RO Service in Bangalore | Kent & Pureit RO Repair",
+  title: "Bangalore RO Care | RO Water Purifier Repair & Service in Bangalore",
   description:
-    "Bangalore RO Care provides professional RO water purifier service, repair, installation, filter replacement and AMC in Bangalore. Expert doorstep service for Kent, Pureit and other major RO brands.",
+    "Bangalore RO Care provides professional RO water purifier service, repair, installation, filter replacement and AMC in Bangalore. Expert doorstep service for all major water purifier models.",
   keywords: [
     "RO service in Bangalore",
     "RO repair Bangalore",
     "Water purifier service Bangalore",
-    "Kent RO service Bangalore",
-    "Kent RO repair Bangalore",
-    "Pureit service Bangalore",
-    "Pureit RO repair Bangalore",
+    "RO UV water purifier service Bangalore",
+    "Multi brand RO service Bangalore",
     "RO filter replacement Bangalore",
     "RO AMC Bangalore",
     "RO installation Bangalore",
@@ -20,12 +18,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Bangalore RO Care" }],
   openGraph: {
-    title: "Kentro | RO Service in Bangalore | Kent & Pureit RO Repair",
+    title: "Bangalore RO Care | RO Water Purifier Repair & Service in Bangalore",
     description:
-      "Expert doorstep RO repair, filter replacement, installation & AMC across Bangalore. Quick 90-min service for Kent, Pureit and top brands.",
+      "Expert doorstep RO repair, filter replacement, installation & AMC across Bangalore. Quick 90-min service for all major water purifier models.",
     type: "website",
     locale: "en_IN",
-    siteName: "Kentro",
+    siteName: "Bangalore RO Care",
   },
 };
 
